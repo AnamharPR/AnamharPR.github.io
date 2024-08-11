@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Head Meta-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUED (Library User Education Development)</title>
+    <link rel="stylesheet" href="css/main css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+  </head>
+
+  <!--Header-->
+
+  <nav>
+    <div id="menu-icon" class="menu-icon">
+      <i class="ph-bold ph-list"></i>
+    </div>
+    <ul id="menu-list" class="hidden">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="education.html">Edukasi</a>
+      </li>
+      <li>
+        <a href="opac.html">OPAC</a>
+      </li>
+      <li>
+        <a href="sirkulasi.html">Sirkulasi</a>
+      </li>
+      <li>
+        <a href="anggota.html">Anggota</a>
+      </li>
+      <li>
+        <a href="faq.html">FAQ</a>
+      </li>
+    </ul>
+  </nav>
+    <!--Table List Anime-->
+
+    <h3 class="heading">Video Gallery Edukasi Pemakai</h3>
+
+    <div class="container">
+      <div class="main">
+        <div class="video">
+          <video src="vid/sunset.mp4" width="700" height="500" controls loop></video>
+          <h3 class="title">01. Video title goes here</h3>
+          <p class="description">This is a description of the first video.</p>
+        </div>
+      </div>
+
+      <div class="video-list">
+        <div class="vid active">
+          <video src="vid/video1.mp4" width="200" height="100" controls loop></video>
+          <h3 class="title">01. Profil Perpustakaan</h3>
+          <p class="description">Video pengenalan</p>
+        </div>
+        <div class="vid">
+          <video src="vid/video2.mp4" width="200" height="100" controls loop></video>
+          <h3 class="title">02. Tatib Perpustakaan</h3>
+          <p class="description">Tata Tertib Perpustakaan.</p>
+        </div>
+        <div class="vid">
+          <video src="vid/video3.mp4" width="200" height="100" controls loop></video>
+          <h3 class="title">03. OPAC</h3>
+          <p class="description">Pencarian Koleksi</p>
+        </div>
+        <div class="vid">
+          <video src="vid/video4.mp4" width="200" height="100" controls loop></video>
+          <h3 class="title">04. Sirkulasi</h3>
+          <p class="description">Data akses koleksi</p>
+        </div>
+        <div class="vid">
+          <video src="vid/video5.mp4" width="200" height="100" controls loop></video>
+          <h3 class="title">05. Anggota</h3>
+          <p class="description">Cara menjadi anggota perpustakaan</p>
+        </div>
+      </div>
+    </div>
+
+    <main>
+    <h2>Materi Pengenalan perpustakaan</h2>
+    <p>Simak video tersebut! dengan cara mengklik video!</p>
+    <p>Akan ada quiz dibawah ini untuk mengetahui pemahaman anda</p>
+    <h2>Link</h2>
+    <button class="link-button" onclick="window.open('https://forms.gle/b8ApTyP47FgpVUqw9', '_blank')">ini</button>
+      <section id="panduan">
+        <h2>Panduan Penggunaan Website</h2>
+        <p>Di halaman ini, Anda akan menemukan panduan lengkap untuk menggunakan website kami. Mulai dari cara mencari buku, meminjam, hingga mengakses materi digital.</p>
+      </section>
+
+      <section id="tips">
+        <h2>Tips dan Trik</h2>
+        <ul>
+          <li>Manfaatkan fitur pencarian untuk menemukan buku dengan cepat.</li>
+          <li>Gunakan filter untuk menyaring hasil pencarian sesuai kategori yang Anda inginkan.</li>
+          <li>Cek katalog digital kami untuk mengakses e-book dan jurnal ilmiah.</li>
+        </ul>
+      </section>
+
+      <section id="materi-edukasi">
+        <h2>Materi Edukasi</h2>
+        <p>Belajar tentang literasi informasi dan penelusuran pustaka sangat penting untuk memanfaatkan sumber daya perpustakaan secara efektif. Berikut adalah beberapa materi yang dapat membantu Anda:</p>
+        <ul>
+          <li><a href="https://sma.kemdikbud.go.id/data/files/buku/Panduan%20GLS%20SMA%20(Edisi%20Revisi%202020).pdf" target="_blank">Panduan Literasi Informasi</a></li>
+          <li><a href="https://online.fliphtml5.com/pnhmp/mtmv/#p=4" target="_blank">Teknik Penelusuran Pustaka</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <div class="botnav">
+      <a href="about.html">About Us</a>
+      <a href="terms.html">Terms Of Use</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer">
+      <h2>Enjoy This Site. :)</h2>
+    </div>
+    <script>
+      let listVideo = document.querySelectorAll(".video-list .vid");
+      let mainVideo = document.querySelector(".main .video video");
+      let title = document.querySelector(".main .video .title");
+      let description = document.querySelector(".main .video .description");
+
+      listVideo.forEach((video) => {
+        video.onclick = () => {
+          listVideo.forEach((video) => video.classList.remove("active"));
+          video.classList.add("active");
+          if (video.classList.contains("active")) {
+            let src = video.children[0].getAttribute("src");
+            mainVideo.src = src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+            let desc = video.children[2].innerHTML;
+            description.innerHTML = desc;
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

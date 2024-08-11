@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Head Meta-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUED (Library User Education Development)</title>
+    <link rel="stylesheet" href="css/main css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+  </head>
+  <!--Header-->
+  <body>
+    <div class="header">
+      <h2>LUED</h2>
+      <p>Library User Education Demo</p>
+    </div>
+    <nav>
+      <div id="menu-icon" class="menu-icon">
+        <i class="ph-bold ph-list"></i>
+      </div>
+      <ul id="menu-list" class="hidden">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="education.html">Edukasi</a>
+        </li>
+        <li>
+          <a href="opac.html">OPAC</a>
+        </li>
+        <li>
+          <a href="sirkulasi.html">Sirkulasi</a>
+        </li>
+        <li>
+          <a href="anggota.html">Anggota</a>
+        </li>
+        <li>
+          <a href="faq.html">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="informasi-kontak">
+        <h2>Informasi Kontak</h2>
+        <p><strong>Alamat:</strong> Jl. Perpustakaan No. 123, Kota Buku, 45678</p>
+        <p><strong>Telepon:</strong> (021) 123-4567</p>
+        <p><strong>Email:</strong> <a href="mailto:info@library.com">info@library.com</a></p>
+      </section>
+
+      <section id="formulir-kontak">
+        <h2>Formulir Kontak</h2>
+        <form action="submit_kontak.php" method="post">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="pesan">Pesan:</label>
+          <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+          <button type="submit">Kirim</button>
+        </form>
+      </section>
+
+      <section id="media-sosial">
+        <h2>Ikuti Kami di Media Sosial</h2>
+        <ul>
+          <li><a href="https://facebook.com/perpustakaan">Facebook</a></li>
+          <li><a href="https://twitter.com/perpustakaan">Twitter</a></li>
+          <li><a href="https://instagram.com/perpustakaan">Instagram</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <div class="botnav">
+      <a href="about.html">About Us</a>
+      <a href="terms.html">Terms Of Use</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer">
+      <h2>Enjoy This Site. :)</h2>
+    </div>
+  </body>
+</html>
